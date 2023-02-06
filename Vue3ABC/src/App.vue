@@ -9,9 +9,10 @@ show: function(){
 }
 }
 </script>
-
+Glebchikkk
 <template>
-<button @click="show">data</button>
+<button  v-on:mouseover="show">Наведение</button>
+<button  @click="show">Нажатие</button>
 </template>
 
 <style >
