@@ -2,22 +2,24 @@
 export default{
 data(){
 return{
+    text: 'A80',
 }
 },
 methods: {
-show: function(str){
-alert(str*str);
+change: function(){
+    this.text = 'Toyota';
 },
-show1: function(str1){
-    alert(str1*str1)
+change2: function(){
+this.text = 'Supra'
 }
 }
 }
 </script>
 Glebchikkk
 <template>
-<button  @click="show(2)">btn1</button>
-<button  @click="show1(3)">btn2</button>
+<p>{{ text }}</p>
+<button @click="change">Toyota</button>
+<button @click="change2">Supra</button>
 </template>
 
 <style >
