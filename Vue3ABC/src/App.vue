@@ -2,20 +2,18 @@
 export default{
 data(){
 return{
-    supra: true,
-}
-},
-methods: {
-SUPRA: function(){
-this.supra = false;
+    SUPRA: [1, 2, 3, 4, 5],
 }
 }
 }
 </script>
 Glebchikkk
 <template>
-<button @click="supra">supra</button>
-<p v-show="supra">A80</p>
+<div v-for="elem in supra">{{ elem }}</div>
+<br>
+<div v-for="elem in supra">{{ elem*elem }}</div>
+<br>
+<ul v-for="elem in supra">{{ elem }}</ul>
 </template>
 
 <style >
