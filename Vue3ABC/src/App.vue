@@ -2,30 +2,21 @@
 export default{
 data(){
 return{
-    SUPRA: {a:'100$', b:'200$', c:'300$'},
+    SUPRA: [1, 2, 3],
 }
 }
 }
 </script>
 Glebchikkk
 <template>
-<ul>
-    <li v-for="elem in SUPRA">{{ elem }}</li>
-</ul>
+<div v-for="elem in SUPRA">
+<p>{{ elem }}</p>
+<p class="divider"> </p>
+</div>
 <br>
-<br>
-<ul>
-    <li v-for="(key, elem) in SUPRA"> {{ elem }} - {{ key }}</li>
-</ul>
-<br>
-<br>
-<ul>
-    <li v-for="(key, elem, index) in SUPRA"> {{ elem }} - {{ key }} - {{ index }}</li>
-</ul>
-<br>
-<br>
-<ul>
-    <li v-for="(key, elem, index) in SUPRA"> {{ elem }} - {{ key }} - {{ index+1 }}</li>
+<ul v-for="elem in SUPRA">
+    <li>{{ elem }}</li>
+    <li class="divider"> </li>
 </ul>
 </template>
 
