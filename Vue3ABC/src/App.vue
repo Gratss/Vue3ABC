@@ -2,18 +2,27 @@
 export default{
 data(){
 return{
-    isSupra: [1, -2, 3, -4, 5],
+    SUPRA: [
+    {
+        id: 1,
+        name: 'Toyota',
+    },
+    {
+        id: 2,
+        name: 'Supra',
+    },
+    {
+        id: 3,
+        name: 'A80',
+    },
+    ]
 }
 }
 }
 </script>
 Glebchikkk
 <template>
-<ul>
-    <template v-for="elem in isSupra">
-    <li v-if="elem > 0 ">{{ elem }}</li>
-    </template>
-</ul>
+<p class= "styled" v-for="prod in Supra" :key='Supra.id'>{{ prod.name }}</p>
 </template>
 
 <style >
