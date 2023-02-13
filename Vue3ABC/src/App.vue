@@ -23,11 +23,11 @@ A80: function () {
 Glebchikkk
 <template>
 <button @click="Toyota">Toyota</button>
-<p v-if="visible">Toyota</p>
+<p>{{visible ? 'Toyota' : '!'}}</p>
 <button @click="Supra">Supra</button>
-<p v-if="visible2">Supra</p>
+<p>{{visible2 ? 'Supra' : '!'}}</p>
 <button @click="A80">A80</button>
-<p v-if="visible3">A80</p>
+<p>{{visible3 ? 'A80' : '!'}}</p>
 </template>
 
 <style >
