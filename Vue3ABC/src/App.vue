@@ -2,18 +2,14 @@
 export default{
 data(){
 return{
-    SUPRA: [1, 2, 3, 4, 5],
+    SUPRA: ['x', 'y', 'z'],
 }
 }
 }
 </script>
 Glebchikkk
 <template>
-<div v-for="elem in supra">{{ elem }}</div>
-<br>
-<div v-for="elem in supra">{{ elem*elem }}</div>
-<br>
-<ul v-for="elem in supra">{{ elem }}</ul>
+<ul v-for="(elem, key) in supra"> {{ key }} {{ elem }}</ul>
 </template>
 
 <style >
