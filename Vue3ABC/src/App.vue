@@ -16,9 +16,9 @@ Glebhcikkk
 <template>
 <button @click="supra">supra</button>
 <div v-if="supra">
-<p>Pin</p>
-<p>Nyusha</p>
-<p>Krosh</p>
+<p>Toyota</p>
+<p>Supra</p>
+<p>A80</p>
 </div>
 </template>
 
