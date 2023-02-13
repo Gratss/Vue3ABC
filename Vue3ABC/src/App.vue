@@ -2,16 +2,24 @@
 export default{
 data(){
 return{
-    age: 25,
+    supra: true,
+}
+},
+methods: {
+SUPRA: function(){
+this.supra = false;
 }
 }
 }
 </script>
-Glebchikkk
+Glebhcikkk
 <template>
-<p v-if="age < 18">Подросток</p>
-<p v-else-if="19 < age && age < 25">Молодой человек</p>
-<p v-else="age > 26">Мужчина</p>
+<button @click="supra">supra</button>
+<div v-if="supra">
+<p>Pin</p>
+<p>Nyusha</p>
+<p>Krosh</p>
+</div>
 </template>
 
 <style >
