@@ -12,14 +12,10 @@ this.supra = false;
 }
 }
 </script>
-Glebhcikkk
+Glebchikkk
 <template>
 <button @click="supra">supra</button>
-<div v-if="supra">
-<p>Toyota</p>
-<p>Supra</p>
-<p>A80</p>
-</div>
+<p v-show="supra">A80</p>
 </template>
 
 <style >
