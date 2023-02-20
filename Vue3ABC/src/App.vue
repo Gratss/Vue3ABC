@@ -3,10 +3,21 @@ export default{
 data(){
 return{
     cssClasses: 'Supra',
-    obj: {
-    done: true,
-    selected: false,
+    visible: true,
+    style: {
+    hidden: true,
 }
+}
+},
+methods: {
+setDone:function(){
+this.style.hidden = false;
+},
+setTwo: function(){
+this.style.hidden = true;
+},
+supra: function () {
+    this.visible = !this.visible;
 }
 }
 }
@@ -14,8 +25,11 @@ return{
 Glebchikkk
 
 <template>
-<p :class="cssClasses">Supra</p>
-<p :class="obj">A80</p>
+<button @click="supra">supra</button>
+<p class="supra" v-if="visible">supra</p>
+<p :class="style">Conclave</p>
+<button @click="setDone">показывает</button>
+<button @click="setTwo">прячет</button>
 </template>
 
 <style >
@@ -28,22 +42,7 @@ Glebchikkk
     text-decoration: none;
     font-size: 20px;
 }
-.selected{
-    padding: 10px;
-    margin: 10px;
-    background: rgb(234, 129, 16);
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 20px;
-}
-.done {
-    padding: 10px;
-    margin: 10px;
-    background: rgb(20, 247, 213);
-    color: rgb(12, 51, 245);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 20px;
+p.hidden{
+display: none;
 }
 </style>
