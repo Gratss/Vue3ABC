@@ -2,21 +2,25 @@
 export default{
 data(){
 return{
+    cssClasses: 'Supra',
 }
 }
 }
 </script>
 Glebchikkk
+
 <template>
-<p>Mazda</p>
-<p1>Toyota</p1>
+<p :class="cssClasses">Supra</p>
 </template>
 
 <style >
-p {
-		color: rgb(0, 255, 238);
-	}
-p1 {
-		color: rgb(0, 13, 255);
-	}
+.Supra {
+    padding: 10px;
+    margin: 10px;
+    background: rgb(160, 204, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
 </style>
