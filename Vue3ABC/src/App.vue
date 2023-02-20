@@ -2,19 +2,12 @@
 export default{
 data(){
 return{
-    num: 0,
-    res: 0,
-sum: 0,
-num1: 0, 
-num2: 0,
+    smeshariki: ' ',
+    conclave: ' ',
 }
 },
 methods: {
-Supra: function () {
-    this.res = Math.sqrt(this.num);
-},
-supra:function(){
-    this.sum = this.num1 + this.num2;
+list: function(){
 }
 }
 }
@@ -22,15 +15,13 @@ supra:function(){
 Glebchikkk
 
 <template>
-<p>{{ res }}</p>
-<input class="text-field__input" v-model="num">
-<button @click="supra">квадратный корень</button>
+<textarea class="text-field__input" v-model="supra"></textarea>
+<p>{{ supra }}</p>
 <br>
-<p>{{ sum }}</p>
-<input class="text-field__input" v-model=num1>
-<input class="text-field__input" v-model=num2>
-<button @click="supra">сумма</button>
-<br>
+<button @click="Gleb">Gleb</button>
+<ul>
+<li v-for="supra in supra">{{ Supra }}</li>
+</ul>
 </template>
 
 <style>
