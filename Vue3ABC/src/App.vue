@@ -2,22 +2,35 @@
 export default{
 data(){
 return{
-message: 'Gleb',
-number: '+7978233355599',
+    num: 0,
+    res: 0,
+sum: 0,
+num1: 0, 
+num2: 0,
 }
 },
 methods: {
+Supra: function () {
+    this.res = Math.sqrt(this.num);
+},
+supra:function(){
+    this.sum = this.num1 + this.num2;
+}
 }
 }
 </script>
 Glebchikkk
 
 <template>
-<input class="text-field__input" v-model="message">
-<p :style="{textTransform: 'uppercase'}">{{ message }}</p>
+<p>{{ res }}</p>
+<input class="text-field__input" v-model="num">
+<button @click="supra">квадратный корень</button>
 <br>
-<input class="text-field__input" v-model="number">
-<p>{{ number*number }}</p>
+<p>{{ sum }}</p>
+<input class="text-field__input" v-model=num1>
+<input class="text-field__input" v-model=num2>
+<button @click="supra">сумма</button>
+<br>
 </template>
 
 <style>
