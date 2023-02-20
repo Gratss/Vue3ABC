@@ -2,26 +2,24 @@
 export default{
 data(){
 return{
-    smeshariki: ' ',
-    conclave: ' ',
+    check_mark: true,
+    visible: true,
 }
 },
 methods: {
-list: function(){
-}
+Supra: function () {
+    this.check_mark = false;
+    this.visible = !this.visible;
+},
 }
 }
 </script>
 Glebchikkk
 
 <template>
-<textarea class="text-field__input" v-model="supra"></textarea>
-<p>{{ supra }}</p>
-<br>
-<button @click="Gleb">Gleb</button>
-<ul>
-<li v-for="supra in supra">{{ Supra }}</li>
-</ul>
+<input class="text-field__input" type="checkbox" v-model="check_mark"> 
+<button @click="Supra">Supra</button>
+<p v-if="visible">{{ check_mark ? 'A80' : 'Toyota' }}</p>
 </template>
 
 <style>
