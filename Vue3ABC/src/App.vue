@@ -2,13 +2,36 @@
 export default{
 data(){
 return{
-    supra: '',
-    supra: ['Toyota', 'Supra', 'A80'],
+    students: [
+    {
+        id: 1,
+        name: 'Gleb',
+        surn: 'Selivanov',
+        salary: 100,
+				age: 18,
+    },
+    {
+        id: 2,
+        name: 'Edem',
+        surn: 'Seytumerov',
+        salary: 200,
+				age: 18,
+    },
+    {
+        id: 3,
+        name: 'Edem',
+        surn: 'Asanov',
+        salary: 300,
+				age: 18,
+    },
+    ],
 }
 },
 methods: {
-addSmeshariki: function () {
-    this.supra.unshift(this.supra);
+removeStudents: function (id) {
+    this.students = this.students.filter((student) => {
+    return student.id !== id;
+    })
 }
 }
 }
@@ -16,16 +39,11 @@ addSmeshariki: function () {
 Glebchikkk
 
 <template>
-    <ul>
-    <li v-for="(item, index) in 
-                Supra" :key="index">
-        {{ item }}
-        <br>
-        <button @click="removeSupra(index)">Del</button>
-    </li>
-    </ul>
-    </template>
-    
-    <style>
-    </style>
-    
+<table>
+<tr v-for="student in students" :key="student.id"> {{ student.name }} {{ student.surn }} {{ student.salary }} {{ student.age }} <button class="button" @click="removeStudents(students.id)">remove</button>
+</tr>
+</table>
+</template>
+
+<style>
+</style>
