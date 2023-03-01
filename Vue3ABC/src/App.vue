@@ -9,7 +9,7 @@ components: {
 Glebchikkk
 
 <template>
-<Supra />
+<Supra name="Gleb" surn="Selivanov" age="18"/>
 </template>
 
 <style>
