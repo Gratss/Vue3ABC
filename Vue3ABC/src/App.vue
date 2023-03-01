@@ -16,16 +16,17 @@ addSmeshariki: function () {
 Glebchikkk
 
 <template>
-<ul class="styled">
-<li v-for="(item, index) in 
-			supra" :key="index">
-    {{ item }}
-</li>
-</ul>
-<input class="text-field__input" v-model="supra">
-<br>
-<button @click="addSupra">add</button>
-</template>
-
-<style>
-</style>
+    <ul class="styled">
+    <li v-for="(item, index) in 
+                Supra" :key="index">
+        {{ item }}
+    </li>
+    </ul>
+    <input class="text-field__input" v-model="Supra">
+    <br>
+    <button @click="addSupra">add</button>
+    </template>
+    
+    <style>
+    </style>
+    
