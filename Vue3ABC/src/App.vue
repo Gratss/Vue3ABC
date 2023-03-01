@@ -10,20 +10,19 @@ components: {
     Supra
 },
 methods: {
-    Supra() {
-    alert('Toyota, Supra, A80');
+    aaa(name) {
+    console.log(name);
     },
-    Student(){
-    alert('Gleb, Edem, Edem')
+    bbb(name, salary){
+console.log(name, salary);
     }
 }
 }
-
 </script>
 Glebchikkk
 
 <template>
-<Supra @show="Supra" @show1="Student" />
+<Supra @show="aaa" @show1="bbb"/>
 </template>
 <style>
 </style>
