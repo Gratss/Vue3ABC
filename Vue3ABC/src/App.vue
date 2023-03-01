@@ -3,37 +3,27 @@ import Supra from './components/User.vue'
 export default {
 data() {
     return {
-    Supra: [
-        {
-        id: 1,
-        name: 'Gleb',
-        salary: 95000,
-        age: 18
-        },
-        {
-        id: 2,
-        name: 'Edem',
-        salary: 90000,
-        age: 18
-        },
-        {
-        id: 3,
-        name: 'Edem',
-        salary: 90000,
-        age: 18
-        },
-    ],
-}
+    
+    }
 },
 components: {
     Supra
+},
+methods: {
+    Supra() {
+    alert('Toyota, Supra, A80');
+    },
+    Student(){
+    alert('Gleb, Edem, Edem')
+    }
 }
 }
+
 </script>
 Glebchikkk
 
 <template>
-<Supra v-for="supras in smeshariki" :name="supras.name" :salary="supras.salary" :age="supras.age" :key="supras.id" />
+<Supra @show="Supra" @show1="Student" />
 </template>
 <style>
 </style>
