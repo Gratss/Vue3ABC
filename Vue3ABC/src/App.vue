@@ -1,10 +1,14 @@
-
 <script>
 export default{
 data(){
 return{
-supra: ' ',
-supra: ' '
+    supra: '',
+    supra: ['Toyota', 'Supra', 'A80'],
+}
+},
+methods: {
+addSmeshariki: function () {
+    this.supra.unshift(this.supra);
 }
 }
 }
@@ -12,11 +16,15 @@ supra: ' '
 Glebchikkk
 
 <template>
+<ul class="styled">
+<li v-for="(item, index) in 
+			supra" :key="index">
+    {{ item }}
+</li>
+</ul>
 <input class="text-field__input" v-model="supra">
-<p>{{ supra }}</p>
 <br>
-<a href="#" class="inline-link-1" >Supra</a>
-<p ></p>
+<button @click="addSupra">add</button>
 </template>
 
 <style>
