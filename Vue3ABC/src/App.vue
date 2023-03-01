@@ -1,6 +1,13 @@
 <script>
 import Supra from './components/User.vue'
 export default {
+data() {
+    return {
+    name: 'Gleb',
+    salary: '95000',
+    age: '18',
+    }
+},
 components: {
     Supra
 }
@@ -9,8 +16,7 @@ components: {
 Glebchikkk
 
 <template>
-<Supra :name="['Toyota', 'Supra', 'A80']"/>
+<Supra :name="name" :salary="salary" :age="age"/>
 </template>
-
 <style>
 </style>
