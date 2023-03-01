@@ -25,26 +25,22 @@ data() {
     }
 },
 components: {
-    Supra
+    Supra, UserForm
 },
 methods: {
-    remove(id) {
-    this.Supra = this.Supra.filter((Supras) => {
-        return Supras.id !== id;
-    })
+    add(name, surn){
+    let id = this.supra.length + 1;
+    this.supra.push({
+        id, name, surn
+    });
     }
 }
 }
 </script>
-Glebchikkk
 
 <template>
-<Supra v-for   ="Supras in Supra"
-		:id     ="Supras.id"
-		:name   ="supras.name"
-		:surn   ="supras.surn"
-		@remove ="remove"
-		:key    ="supras.id"/>
+<UserForm @add="add"/>
 </template>
+
 <style>
 </style>
